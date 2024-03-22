@@ -386,7 +386,7 @@ body {
   position: relative;
   --section-padding: 1820px 64px;
   text-align: center;
-  background-image: url(/image/Untitled\ video\ -\ Made\ with\ Clipchamp.gif);
+  background-image: url(/image/wwss.gif);
   background-repeat: no-repeat;
   background-attachment:scroll;
   background-size: cover;
@@ -414,7 +414,7 @@ body {
 
 
 /*-----------------------------------*\
-  #TOP COLLECTION
+  #news
 \*-----------------------------------*/
 
 .top-collection .title-wrapper .btn-link { display: none; }
@@ -449,34 +449,13 @@ body {
 
 .collection-card .card-profile {
   position: relative;
-  width: 64px;
+  width: 100px;
   margin-block-start: -50px;
   box-shadow: var(--shadow-2);
   background-color: var(--oxford-blue);
 }
 
-.collection-card .card-profile img { border-radius: var(--radius-6); }
-
-.collection-card .card-profile ion-icon {
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  color: var(--green-cyan);
-  font-size: 2.3rem;
-}
-
 .collection-card .card-title { margin-block-start: 12px; }
-
-.collection-card .card-author {
-  display: flex;
-  gap: 2px;
-  font-style: italic;
-}
-
-.collection-card .card-author .link {
-  font-style: normal;
-  color: var(--blue-violet);
-}
 
 .collection-card .card-text { margin-block-start: 4px; }
 
@@ -515,12 +494,13 @@ body {
 /*-----------------------------------*\
   #DISCOVER
 \*-----------------------------------*/
-
+.discover.container{}
 .discover-card {
   padding: 8px;
   border: 1px solid var(--gunmetal);
   box-shadow: var(--shadow-5);
   transition: var(--transition-1);
+  
 }
 
 .discover-card:is(:hover, :focus-within) {
@@ -594,6 +574,7 @@ body {
 .discover .btn-link {
   margin-inline: auto;
   margin-block-start: 32px;
+  
 }
 
 
@@ -1028,33 +1009,9 @@ body {
 
 
 
-  /**
-   * QNA
-   */
-
-  .qna .container { max-width: 55%; }
 
 
-
-  /**
-   * NEWSLETTER
-   */
-
-  .newsletter-card { padding-inline: 32px; }
-
-  .newsletter .bg-icon { font-size: 15rem; }
-
-  .newsletter .bg-icon-1 {
-    top: -36px;
-    left: -36px;
-  }
-
-  .newsletter .bg-icon-2 {
-    bottom: -30px;
-    right: -30px;
-  }
-
-
+  
 
   /**
    * FOOTER

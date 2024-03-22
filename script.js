@@ -1,13 +1,4 @@
 'use strict';
-
-
-
-
-/**
- * HEADER & BACK TOP BTN
- * header and back top btn visible when window scroll down to 200px
- */
-
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
