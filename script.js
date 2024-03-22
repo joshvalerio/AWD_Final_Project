@@ -1,5 +1,20 @@
 'use strict';
 
+document.getElementById("registerBtn").addEventListener("click", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  
+  // Validate email format
+  var emailInput = document.getElementById("emailInput").value;
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailInput)) {
+      alert("Please enter a valid email address.");
+      return; // Stop further execution
+  }
+  
+  // Redirect to home.html if email format is valid
+  window.location.href = "home.html";
+});
 
 
 
