@@ -494,7 +494,6 @@ body {
 /*-----------------------------------*\
   #DISCOVER
 \*-----------------------------------*/
-.discover.container{}
 .discover-card {
   padding: 8px;
   border: 1px solid var(--gunmetal);
