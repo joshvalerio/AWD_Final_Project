@@ -30,7 +30,7 @@
    * gradient color
    */
 
-  --linear-gradient-1: linear-gradient(to top left, hsla(0, 72%, 51%, 0.4) 0%, hsla(262, 83%, 58%, 0.4));
+  --linear-gradient-1: linear-gradient(to top left, hsla(68, 72%, 51%, 0.4) 0%, hsla(188, 83%, 58%, 0.4));
   --linear-gradient-2: linear-gradient(to right, rgb(237, 225, 59), hsla(0, 72%, 51%, 1));
 
   /**
@@ -46,7 +46,7 @@
   --title-sm: 1.7rem;
   --body-lg: 2rem;
   --body-md: 1.7rem;
-  --label-lg: 1.5rem;
+  --label-lg: 2.4rem;
   --label-md: 1.4rem;
   
   --fw-700: 700;
@@ -144,6 +144,10 @@ html {
 
 body {
   background-color: var(--oxford-blue-2);
+  background-image: url(/image/pokestop.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
   color: var(--cadet-grey);
   font-size: 1.6rem;
   line-height: 1.5;
@@ -359,6 +363,7 @@ body {
   box-shadow: var(--shadow-1);
   z-index: 1;
   overflow: hidden;
+  font-size: larger;
 }
 
 .navbar.active { height: max-content; }
@@ -381,6 +386,7 @@ body {
   position: relative;
   --section-padding: 180px 64px;
   text-align: center;
+  background-color: rgba(9, 74, 87, 0.804);
 }
 
 .hero-title .span {
@@ -389,6 +395,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
 
 .hero .section-text {
