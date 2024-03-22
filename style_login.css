@@ -6,13 +6,31 @@
   box-sizing: border-box;
 }
 
+.container {
+    padding-top: 100px; /* Adjust the value as needed to create enough space for your logo */
+    min-height: 800px;
+    height: 100vh;
+  }
+
 body,
 input {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+    background-color: var(--oxford-blue-2);
+    background-image: url(/image/body_bg.png);
+    background-repeat: repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    color: var(--cadet-grey);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    z-index: 1;
+  }
+  
 
-.signin-signup {
+/* .signin-signup {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -22,7 +40,7 @@ input {
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
-}
+} */
 
 form {
   display: flex;
@@ -38,12 +56,12 @@ form {
 
 .title {
   font-size: 2.2rem;
-  color: #444;
+  color: #f0f0f0;
   margin-bottom: 10px;
 }
 
 .input-field {
-  max-width: 380px;
+  max-width: 400px;
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
@@ -128,20 +146,23 @@ form {
 }
 
 
-.container:before {
-  content: "";
-  position: absolute;
-  height: 2000px;
-  width: 2000px;
-  top: -10%;
-  right: 48%;
-  transform: translateY(-50%);
- background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
-  transition: 1.8s ease-in-out;
-  border-radius: 50%;
-  z-index: 6;
-}
-
+/* .container:before {
+    content: "";
+    position: absolute;
+    height: 1500px; 
+    width: 1500px;
+    top: 150px; 
+    right: 50%;
+    transform: translateY(-50%);
+    background-image: url('/image/pokemon-go-login.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 6;
+  }
+   */
+  
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
