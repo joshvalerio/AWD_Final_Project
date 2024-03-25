@@ -111,7 +111,8 @@ img,
 span,
 input,
 button,
-ion-icon { display: block; }
+ion-icon { display: block;
+ }
 
 a {
   text-decoration: none;
@@ -838,7 +839,7 @@ body {
    * DISCOVER
    */
 
-  .discover .btn-link { margin-block-start: 60px; }
+  .discover .btn-link { margin-block-start: 16px; }
 
 
 
