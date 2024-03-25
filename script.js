@@ -16,8 +16,6 @@ document.getElementById("registerBtn").addEventListener("click", function(event)
   window.location.href = "home.html";
 });
 
-
-
 /**
  * HEADER & BACK TOP BTN
  * header and back top btn visible when window scroll down to 200px
