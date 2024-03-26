@@ -1,0 +1,429 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Urbanist", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root {
+    --prussian-blue: hsla(217, 33%, 17%, 1);
+    --oxford-blue-2: hsla(222, 47%, 11%, 1);
+    --oxford-blue: hsla(221, 33%, 15%, 1);
+    --blue-violet: rgb(237, 163, 59);
+    --blue-violet_a5: hsla(262, 83%, 58%, 0.05);
+    --blue-violet_a10: hsla(262, 83%, 58%, 0.1);
+    --alice-blue: hsla(214, 32%, 91%, 1);
+    --alice-blue-2: hsla(215, 30%, 92%, 1);
+    --cultured: hsla(220, 14%, 96%, 1);
+    --gainsboro: hsla(220, 13%, 91%, 1);
+    --light-gray: hsla(216, 12%, 84%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --white_a10: hsla(0, 0%, 100%, 0.1);
+    --manatee: hsla(218, 11%, 65%, 1);
+    --green-cyan: hsla(161, 94%, 30%, 1);
+    --cadet-grey: rgb(13, 16, 19);
+    --electric-indigo: hsla(263, 70%, 50%, 1);
+    --maximum-red: hsla(0, 72%, 51%, 1);
+    --black: hsla(0, 0%, 0%, 1);
+    --gunmetal: hsla(215, 28%, 17%, 1);
+
+
+    --linear-gradient-1: linear-gradient(to top left, hsla(68, 72%, 51%, 0.4) 0%, hsla(188, 83%, 58%, 0.4));
+    --linear-gradient-2: linear-gradient(to right, rgb(237, 225, 59), hsla(0, 72%, 51%, 1));
+
+    --ff-urbanist: 'Urbanist', sans-serif;
+
+    --headline-lg: 3.6rem;
+    --headline-md: 2.6rem;
+    --title-lg: 2rem;
+    --title-md: 1.8rem;
+    --title-sm: 1.7rem;
+    --body-lg: 2rem;
+    --body-md: 1.7rem;
+    --label-lg: 2.4rem;
+    --label-md: 1.4rem;
+    
+    --fw-700: 700;
+    --fw-600: 600;
+    --fw-500: 500;
+
+    --section-padding: 32px;
+
+    --shadow-1: 0 0 3px hsl(215, 28%, 17%);
+    --shadow-2: 0 5px 13px hsl(215, 28%, 17%);
+    --shadow-3: 0 5px 13px hsl(217, 19%, 27%);
+    --shadow-4: 0 0 3px hsl(217, 19%, 27%);
+    --shadow-5: 0 5px 13px hsla(214, 19%, 29%, 0.2);
+
+    --radius-circle: 50%;
+    --radius-pill: 100px;
+    --radius-12: 12px;
+    --radius-8: 8px;
+    --radius-6: 6px;
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+
+    --main-color: #273fa1;
+    --text-color: #000;
+    --bg-color: #fff;
+    --container-color: #1e1e2a;
+}
+
+html,
+body,
+div.video-container,
+video
+ {
+  height: 94.5%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+video{
+  height: 100%;
+  width: 100%;
+  object-fit :fill;
+}
+
+.video-container {
+  overflow: hidden;
+  background: #000;
+  display: block !important;
+  position: relative;
+}
+
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+
+.title-container {
+  z-index: 10;
+  color: #FFF;
+  position: absolute;
+}
+
+.adjustedHeight {
+  height: calc(100% - 77px);
+  width: 100%;
+  padding: 0;
+}
+  
+body {
+    background-color: var(--oxford-blue-2);
+    background-image: url(/image/body_bg.png);
+    background-repeat: repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    background-position: center center; /* Added this line */
+    color: var(--cadet-grey);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    z-index: 1;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Set width to 100% for full viewport coverage */
+    height: 60%; /* Set height to 100% for full viewport coverage */
+    background-image: var(--linear-gradient-1); /* Use your desired gradient */
+    border-radius: var(--radius-circle);
+    filter: blur(200px);
+    z-index: -1; /* Set z-index to -1 to place it behind the content */
+  }
+
+
+/* body{
+    color: var(--text-color);
+    background: var(--bg-color);
+
+} */
+img{
+    width: 100%;
+}
+section{
+    padding: 4rem 0 2rem;
+}
+.container{
+    max-width: 1070px;
+    margin: auto;
+    width: 100%;
+}
+header {
+    position:static;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+#menu-icon{
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--main-color);
+    display: none;
+}
+.logo{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navbar {
+    display: flex;
+    margin-left:20rem;
+    column-gap: 2rem;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.nav-link:hover {
+    color: var(--blue-violet); /* Change color on hover */
+}
+
+
+#cart-icon{
+    position: relative;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+#cart-icon[data-quantity="0"]::after{
+    content: "";
+}
+
+.logo-img {
+    width: 120px; 
+    height: auto; 
+    display: block; 
+}
+
+#cart-icon[data-quantity]::after{
+    content: attr(data-quantity);
+    position: absolute;
+    top: 0;
+    right: -11px;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border-radius: 50%;
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home {
+    position: relative;
+    background-image: url(/image/pokemon-background5.gif);
+    background-repeat: no-repeat; /* Set background to not repeat */
+    background-size: cover; /* Ensure the background covers the entire element */
+    background-position: top center; /* Place background image at the top and center horizontally */
+    min-height: 550px;
+}
+
+
+.home-img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+}
+.home-img img{
+    max-width: 700px;
+    width: 100%;
+}
+.home-img::before {
+    content: "PokémonGo ";
+    font-size: 9rem;
+    font-weight: 900;
+    position: absolute;
+    text-align: center;
+    top: -130px;
+    color: #2C2D2D;
+    z-index: -1;
+    right: 300px;
+    white-space: nowrap;
+}
+
+.home-img::after {
+    content: "Store";
+    font-size: 9rem;
+    font-weight: 900;
+    position: absolute;
+    text-align: center;
+    top: -130px;
+    color: transparent;
+    background: linear-gradient(45deg, var(--blue-violet), var(--electric-indigo));
+    background-image: var(--linear-gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+    left: 800px; /* Adjust the left position to position "Store" */
+    white-space: nowrap;
+}
+
+.heading{
+    font-size: 4rem;
+    font-weight: 900;
+    /* text-transform: uppercase; */
+    text-align: center;
+    color: var(--white);
+}
+.gradient-text {
+    background: linear-gradient(45deg, var(--blue-violet), var(--electric-indigo));
+    background-image: var(--linear-gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.product-img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.product-title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0.8rem 0 0.5rem;
+}
+.product-price{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color:var(--main-color)
+}
+.add-to-cart{
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 0.6rem;
+    cursor: pointer;
+}
+.cart-container {
+    margin-top: -2rem !important;
+}
+.back-homepage{
+    display: flex;
+    align-items: center;
+}
+.back-homepage .bx{
+    font-size: 24px;
+    color: var(--text-color);
+}
+.back-homepage span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.cart-s-title{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 1rem;
+}
+#cartItems{
+    display: grid;
+    row-gap: 1rem;
+}
+.cart-item{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    align-items: center;
+    border-bottom: 1px solid #f2f0f1;
+    padding-bottom: 10px;
+}
+.cart-item img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+}
+.cart-item-title{
+    font-size: 1.3rem;
+
+}
+.cart-item-quantity{
+    border: 1px solid var(--main-color);
+    outline-color: var(--main-color);
+    width: 2.8rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+.cart-item-price{
+    font-size: 1.3rem;
+}
+.remove-from-cart{
+    max-width: 80px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: red;
+    color: var(--bg-color);
+    padding: 8px;
+    cursor: pointer;
+}
+.cart-t{
+    display: flex;
+    flex-direction: column;
+}
+#cartTotal{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.checkout-btn{
+    margin-top: 2rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+    max-width: 150px;
+}
