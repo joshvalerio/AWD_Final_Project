@@ -77,7 +77,48 @@
     --container-color: #1e1e2a;
 }
 
+html,
+body,
+div.video-container,
+video
+ {
+  height: 93%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+video{
+  height: 100%;
+  width: 100%;
+  object-fit :fill;
+}
+
+.video-container {
+  overflow: hidden;
+  background: #000;
+  display: block !important;
+  position: relative;
+}
+
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+
+.title-container {
+  z-index: 10;
+  color: #FFF;
+  position: absolute;
+}
+
+.adjustedHeight {
+  height: calc(100% - 77px);
+  width: 100%;
+  padding: 0;
+}
   
 body {
     background-color: var(--oxford-blue-2);
@@ -243,7 +284,7 @@ header {
     top: -130px;
     color: transparent;
     background: linear-gradient(45deg, var(--blue-violet), var(--electric-indigo));
-    background-image: var(--linear-gradient-2); 
+    background-image: var(--linear-gradient-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: -1;
@@ -267,18 +308,18 @@ header {
 
 .product-container{
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 2rem;
 }
 
 .product-img{
-    width: 100%;
-    height: 350px;
+    width: auto;
+    height: 400px;
     object-fit: cover;
 }
 .product-title{
-    font-size: 1.25rem;
+    font-size: 1.60rem;
     font-weight: 600;
     color: var(--text-color);
     margin: 0.8rem 0 0.5rem;
@@ -288,6 +329,19 @@ header {
     font-weight: 700;
     color:var(--main-color)
 }
+.product-promo{
+    border-radius: 5px;
+    background-color: rgb(212, 61, 144);
+    color: #eee;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: large;
+    padding: 5px 10px;
+    font-weight: 700;
+    width: 217px;   
+}
+
 .add-to-cart{
     background: var(--main-color);
     color: var(--bg-color);
@@ -295,10 +349,19 @@ header {
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 10px;
     margin-top: 0.6rem;
     cursor: pointer;
+    border-radius: 5px;
+    border: groove;
+    
 }
+.add-to-cart:hover{
+    background: var(--linear-gradient-1);
+    color: rgb(49, 51, 47);
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
 .cart-container {
     margin-top: -2rem !important;
 }
