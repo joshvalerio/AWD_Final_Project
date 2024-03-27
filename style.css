@@ -208,6 +208,35 @@ body {
      
  }
 
+.go{
+  font-size: var(--headline-md);
+  color: var(--white);
+  font-weight: var(--fw-600);
+  margin-top: -30px;
+}
+.news{
+  font-size: var(--headline-md);
+  color: var(--white);
+  font-weight: var(--fw-600);
+}
+
+.headline-md {
+  line-height: 10.35; /* Adjust the value as needed */
+}
+
+.body-md {
+  line-height: 1.35; /* Adjust the value as needed */
+}
+
+.headline-md.section-title.text-center {
+  margin-top: -300px; /* Adjust the value as needed */
+}
+
+.body-md.section-text.text-center {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+
 .label-lg { font-size: var(--label-lg); }
 
 .label-md { font-size: var(--label-md); }
@@ -229,11 +258,17 @@ body {
   border: 1px solid var(--blue-violet);
 }
 
+.btn {
+  margin-top: 80px; /* Adjust the value as needed */
+}
+
 .btn-icon ion-icon { --ionicon-stroke-width: 50px; }
 
 .btn-icon.primary {
   background-color: var(--blue-violet);
-  transition: var(--transition-1);
+  transition: var(--transition-2);
+  margin-top: 20px; /* Adjust the value as needed */
+
 }
 
 .btn-icon.primary:is(:hover, :focus-visible) {
@@ -300,6 +335,22 @@ body {
 .grid-list {
   display: grid;
   gap: 32px;
+}
+
+.headline-md {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.body-md {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.section-container .headline-md {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+.section-container .body-md {
+    margin-top: 20px; /* Adjust the value as needed */
 }
 
 
@@ -394,6 +445,8 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
+
   
 }
 
@@ -501,6 +554,18 @@ body {
   margin-block-start: 32px;
   
 }
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px; /* Adjust margin-top as needed */
+}
+
+.larger-btn {
+  font-size: 2rem; /* Adjust font size as needed */
+  padding: 26px 100px; /* Adjust padding as needed */
+}
+
 
 /*-----------------------------------*\
   #CONTACT
@@ -630,6 +695,7 @@ body {
 .copyright .span {
   display: inline;
   color: var(--maximum-red);
+
 }
 
 /*-----------------------------------*\
