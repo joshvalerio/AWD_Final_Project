@@ -178,7 +178,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px; /* Adjust padding */
+    padding: 25px 0;
     gap: 4;
     
 }
@@ -187,6 +187,10 @@ header {
     font-size: 28px;
     cursor: pointer;
     color: var(--main-color); /* Change color */
+    display: none;
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 3px black;
 }
 
 .logo {
@@ -398,9 +402,9 @@ header {
     
 }
 .add-to-cart:hover{
-    background: var(--linear-gradient-2);
-    color: rgb(0, 0, 0);
-    box-shadow: 10px 10px 5px #928f8f;
+  background: var(--linear-gradient-1);
+  color: rgb(49, 51, 47);
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .add-to-cart-container {
@@ -427,9 +431,55 @@ header {
 }
 
 .add-to-cart-below-carousel:hover {
-    background: var(--linear-gradient-2);
-    color: rgb(0, 0, 0);
-    box-shadow: 10px 10px 5px #928f8f;
+  background: var(--linear-gradient-1);
+  color: rgb(49, 51, 47);
+  box-shadow: 10px 10px 5px #aaaaaa
+}
+
+.add-to-cart-below-carouse2 {
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  margin-top: 0.6rem;
+  cursor: pointer;
+  border-radius: 15px;
+  border: groove;
+  transition: background-color 0.2s ease;
+  width: 220px;
+  margin-bottom: 4rem;
+}
+
+.add-to-cart-below-carouse2:hover {
+background: var(--linear-gradient-1);
+color: rgb(49, 51, 47);
+box-shadow: 10px 10px 5px #aaaaaa
+}
+
+.add-to-cart-below-carouse3 {
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  margin-top: 0.6rem;
+  cursor: pointer;
+  border-radius: 15px;
+  border: groove;
+  transition: background-color 0.2s ease;
+  width: 220px;
+  margin-bottom: 4rem;
+}
+
+.add-to-cart-below-carouse3:hover {
+background: var(--linear-gradient-1);
+color: rgb(49, 51, 47);
+box-shadow: 10px 10px 5px #aaaaaa
 }
 
 .cart-container {
@@ -479,6 +529,9 @@ header {
     font-size: 1.3rem;
 
 }
+.product-hide {
+  display: none;
+}
 .cart-item-quantity{
     border: 1px solid var(--main-color);
     outline-color: var(--main-color);
@@ -522,105 +575,105 @@ header {
 }
 
 .carousel-container {
-    position: relative;
-    margin-top: 5rem; /* Adjust top margin as needed */
-    margin-bottom: 6rem; /* Adjust bottom margin as needed */
-    padding: 2rem; /* Adjust padding as needed */
-  }
+  position: relative;
+  margin-top: 9rem; /* Adjust top margin as needed */
+  margin-bottom: 9rem; /* Adjust bottom margin as needed */
+  padding: 2rem; /* Adjust padding as needed */
+  
+}
 
 .items {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    height: 800px; /* Adjust height as needed */
-    overflow: hidden; /* Ensure items don't overlap */
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  height: 800px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure items don't overlap */
+}
+
+.items .item {
+  position: absolute;
+  width: auto; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  border-radius: 15px;
+  transition: all 300ms ease-in-out;
+  opacity: 0; /* Initially hide all slides */
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+
+.item.active {
+  opacity: 1;
+  z-index: 20;
+  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.item.prev {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translateX(-150%); /* Adjust positioning */
+}
+
+.item.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translateX(150%); /* Adjust positioning */
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px; /* Adjust spacing */
+  width: 100%; /* Make the button container fill the carousel */
   
-  .items .item {
-    position: absolute;
-    width: auto; /* Adjust width as needed */
-    height: auto; /* Adjust height as needed */
-    border-radius: 15px;
-    transition: all 300ms ease-in-out;
-    opacity: 1;
-    overflow: hidden;
-    z-index: -1;
-  }
+}
+
+.button-container .button {
   
-  .item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  transition: all 300ms ease-in-out;
+  z-index: 1; /* Ensure buttons appear above the slides */
   
-  .item.active {
-    opacity: 1;
-    z-index: 20;
-    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
-  }
-  
-  .item.prev {
-    z-index: 2;
-    opacity: 0.25;
-    transform: translateX(-150%); /* Adjust positioning */
-  }
-  
-  .item.next {
-    z-index: 2;
-    opacity: 0.25;
-    transform: translateX(150%); /* Adjust positioning */
-  }
-  
-  .button-container {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px; /* Adjust spacing */
-    z-index: 100;
-  }
-  
-  .button-container .button {
-    color: #fff;
-    font-size: 32px;
-    cursor: pointer;
-    position: relative;
-    transition: all 300ms ease-in-out;
-    opacity: 0.75;
-  }
-  
-  .button-container .button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1;
-  }
-  
-  .button-container .button:before {
-    content: ""; /* Add content */
-    position: absolute; /* Set position */
-    top: 50%; /* Position from top */
-    left: 50%; /* Position from left */
-    transform: translate(-50%, -50%); /* Center horizontally and vertically */
-    width: 50px; /* Set width */
-    height: 50px; /* Set height */
-    background-color: rgb(49, 45, 45); /* Set background color */
-    opacity: 40%; /* Set opacity */
-    border-radius: 50%; /* Make circle */
-    z-index: -99; /* Set stacking order */
-  }
-  
-  .button-container .button:nth-child(1) {
-    float: left;
-  }
-  
-  .button-container .button:nth-child(2) {
-    float: right;
-  }
+}
+
+.button-container .button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.button-container .button:before {
+  content: ""; /* Add content */
+  position: absolute; /* Set position */
+  top: 50%; /* Position from top */
+  left: 50%; /* Position from left */
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  background-color: rgb(49, 45, 45); /* Set background color */
+  opacity: 40%; /* Set opacity */
+  border-radius: 50%; /* Make circle */
+  z-index: -1; /* Set stacking order behind buttons */
+}
+
+.button-container .button:nth-child(1) {
+  float: left;
+}
+
+.button-container .button:nth-child(2) {
+  float: right;
+}
 
 
   :root {
