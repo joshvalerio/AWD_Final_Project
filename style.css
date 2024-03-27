@@ -462,31 +462,27 @@ body {
   #news
 \*-----------------------------------*/
 
-.top-collection .title-wrapper .btn-link {
-  display: none;
-}
+.top-collection .title-wrapper .btn-link { display: none; }
 
 .top-collection .slider {
   --slider-item: 1;
+
   position: relative;
   margin-inline: -8px;
-  padding: 4px 0; /* Adjusted padding */
-  overflow-x: auto; /* Changed to auto */
-  white-space: nowrap; /* Added to prevent wrapping */
-  width: 100%; /* Changed to 100% */
+  padding: 4px 12px;
+  overflow-x: hidden;
 }
 
 .top-collection .slider-container {
   position: relative;
-  display: inline-flex; /* Changed to inline-flex */
+  display: flex;
   transition: transform 300ms ease;
 }
 
 .top-collection .slider-item {
-  flex: 0 0 calc(100% / var(--slider-item)); /* Updated to use flexbox */
-  max-width: calc(100% / var(--slider-item)); /* Added max-width */
-  box-sizing: border-box; /* Added box-sizing */
-  padding: 0 8px; /* Adjusted padding */
+  min-width: calc(100% / var(--slider-item));
+  width: calc(100% / var(--slider-item));
+  padding-inline: 12px;
 }
 
 .collection-card {
@@ -494,17 +490,9 @@ body {
   box-shadow: var(--shadow-1);
 }
 
-.collection-card .card-content {
-  padding: 16px;
-}
-
-.collection-card .card-title {
-  margin-block-start: 12px;
-}
-
-.collection-card .card-text {
-  margin-block-start: 4px;
-}
+.collection-card .card-content { padding: 16px; }
+.collection-card .card-title { margin-block-start: 12px; }
+.collection-card .card-text { margin-block-start: 4px; }
 
 .slider-btn {
   position: absolute;
@@ -516,28 +504,18 @@ body {
   height: 32px;
   display: grid;
   place-items: center;
-  border-radius: 50%; /* Changed to make it circular */
+  border-radius: var(--radius-circle);
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
-  color: white; /* Added text color */
 }
 
-.slider-btn:hover,
-.slider-btn:focus-visible { /* Simplified hover and focus-visible styles */
-  background-color: var(--blue-violet);
-}
+.slider-btn:is(:hover, :focus-visible) { background-color: var(--blue-violet); }
 
-.slider-btn:disabled {
-  display: none;
-}
+.slider-btn:disabled { display: none; }
 
-.slider-btn.prev {
-  left: 10px;
-}
+.slider-btn.prev { left: 10px; }
 
-.slider-btn.next {
-  right: 10px;
-}
+.slider-btn.next { right: 10px; }
 
 .top-collection .container > .btn-link {
   margin-inline: auto;
