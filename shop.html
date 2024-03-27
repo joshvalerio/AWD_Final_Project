@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon GO! Shop</title>
     <link rel="stylesheet" type="text/css" href="styleshop.css">
-    <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 </head>
-  <body>
-    <!--header-->
-    <header>
-      
-      <div class="nav container">
+<body>
+<!--header-->
+<header>
+    <div class="nav container">
         <!--menu-->
         <i class="bx bx-menu" id="menu-icon"></i>
         <!--logo-->
-        
-        <a href="home.html" class="logo">PokeShopGO!</a>
+        <a href="home.html" class="logo"><img src="https://lh3.googleusercontent.com/3TSaKxXGo2wT0lu0AyNUBnkk6wkCC2AzOhJyy3JXIPm-AmZ1k9DSAroWeBUyePswCZSs5lVp3mPF7HzUpY9VPlyOV5eddITONINr3WSqLNLm=e365-w512" width="70" height="90" alt="POKEMON GO home" class="logo-small">
+          </a>
         <!--navbar-->
         <div class="navbar">
-          
-          <a href="#" class="nav-link">Item Boxes</a>
-          <a href="#" class="nav-link">PokeCoins</a>
+            <a href="#" class="nav-link">Item Boxes</a>
+            <a href="#" class="nav-link">PokeCoins</a>
         </div>
         <!--cart-->
         <a href="#">
-        <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
-      </a>
-      </div>
-    </header>
-    <!--home-->
-    <section class="home" id="home"></section>
-      <div class="home-img container"></div>
-        <img src="/image/wwss.gif" alt="">
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+        </a>
+    </div>
+</header>
 
-    <script src="addProduct.js"></script>
+<!-- Discovery Products section -->
+<section class="products conntainer" id="products">
+    <h2 class="heading">Discovery Products</h2>
+</section>
+
+<!--home-->
+<section class="home" id="home">
+    <div class="home-img container">
+        <!-- <img src="/image/wwss.gif" alt=""> -->
+    </div>
+</section>
+\
+<section class ="cart-container">
+  <a href="index.html" class="back-homepage">
+  <i class ="bx bx-chevron-left"></i>
+  <span>Back To Home</span>
+  </a>
+  <h2 class="cart-s-title">Shopping Cart</h2>
+  <div class="cart-data">
+    <div id="cartItems"></div>
+  </div>
+</section>
+
+<script src="addProducts.js"></script>
 </body>
 </html>
