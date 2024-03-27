@@ -486,10 +486,26 @@ body {
 }
 
 .top-collection .slider-item {
-  flex: 0 0 calc(100% / var(--slider-item)); /* Updated to use flexbox */
-  max-width: calc(100% / var(--slider-item)); /* Added max-width */
-  box-sizing: border-box; /* Added box-sizing */
-  padding: 0 8px; /* Adjusted padding */
+<<<<<<< HEAD
+  flex: 0 0 auto; /* Change flex to allow images to resize based on their intrinsic size */
+  box-sizing: border-box;
+  padding: 0 4px; /* Adjusted padding */
+  margin: 0; /* Removed margin */
+}
+
+.top-collection .slider-item img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  height: 800px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure items don't overlap */
+=======
+  min-width: calc(100% / var(--slider-item));
+  width: calc(100% / var(--slider-item));
+  padding-inline: 12px;
+>>>>>>> a84a87d10790466bb5a765dc9ca1bfe0295423f9
 }
 
 .collection-card {
@@ -498,18 +514,12 @@ body {
   margin: 0; /* Removed margin */
 }
 
-.collection-card .card-content {
-  padding: 16px;
-}
+.collection-card .card-content { padding: 16px; }
+.collection-card .card-title { margin-block-start: 12px; }
+.collection-card .card-text { margin-block-start: 4px; }
 
-.collection-card .card-title {
-  margin-block-start: 12px;
-}
-
-.collection-card .card-text {
-  margin-block-start: 4px;
-}
-
+<<<<<<< HEAD
+=======
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -520,29 +530,20 @@ body {
   height: 32px;
   display: grid;
   place-items: center;
-  border-radius: 50%; /* Changed to make it circular */
+  border-radius: var(--radius-circle);
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
-  color: white; /* Added text color */
 }
 
-.slider-btn:hover,
-.slider-btn:focus-visible { /* Simplified hover and focus-visible styles */
-  background-color: var(--blue-violet);
-}
+.slider-btn:is(:hover, :focus-visible) { background-color: var(--blue-violet); }
 
-.slider-btn:disabled {
-  display: none;
-}
+.slider-btn:disabled { display: none; }
 
-.slider-btn.prev {
-  left: 10px;
-}
+.slider-btn.prev { left: 10px; }
 
-.slider-btn.next {
-  right: 10px;
-}
+.slider-btn.next { right: 10px; }
 
+>>>>>>> a84a87d10790466bb5a765dc9ca1bfe0295423f9
 .top-collection .container > .btn-link {
   margin-inline: auto;
   margin-block-start: 16px; /* Reduced margin */
