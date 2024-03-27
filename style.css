@@ -468,38 +468,34 @@ body {
   #news
 \*-----------------------------------*/
 
-.top-collection .title-wrapper .btn-link {
-  display: none;
+.top-collection .title-wrapper .btn-link { display: none; }
+
+.top-collection .slider {
+  --slider-item: 1;
+
+  position: relative;
+  margin-inline: -8px;
+  padding: 4px 12px;
+  overflow-x: hidden;
 }
 
 .top-collection .slider-container {
+  position: relative;
   display: flex;
-  overflow-x: auto; /* Allow horizontal scrolling */
-  
-  height: 800px; /* Set a fixed height for the slider container */
+  transition: transform 300ms ease;
 }
 
 .top-collection .slider-item {
-  flex: 0 0 auto;
-  scroll-snap-align: start; /* Ensure each slide snaps to the start of the container */
-  width: 100%; /* Ensure each slide occupies the full width of the container */
-}
-
-.top-collection .slider-item img {
-  width: 600px; /* Specify a specific width for the images */
-  height: 900; /* Maintain the aspect ratio of the image */
-  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
-}
-
-.top-collection .slider-item img {
-  width: 100%; /* Ensure the image covers the entire width of the slide */
-  height: auto; /* Maintain the aspect ratio of the image */
-  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+  flex: 0 0 calc(100% / var(--slider-item)); /* Updated to use flexbox */
+  max-width: calc(100% / var(--slider-item)); /* Added max-width */
+  box-sizing: border-box; /* Added box-sizing */
+  padding: 0 8px; /* Adjusted padding */
 }
 
 .collection-card {
   padding: 12px;
   box-shadow: var(--shadow-1);
+  margin: 0; /* Removed margin */
 }
 
 .collection-card .card-content {
@@ -524,12 +520,14 @@ body {
   height: 32px;
   display: grid;
   place-items: center;
-  border-radius: var(--radius-circle);
+  border-radius: 50%; /* Changed to make it circular */
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
+  color: white; /* Added text color */
 }
 
-.slider-btn:is(:hover, :focus-visible) {
+.slider-btn:hover,
+.slider-btn:focus-visible { /* Simplified hover and focus-visible styles */
   background-color: var(--blue-violet);
 }
 
@@ -547,12 +545,13 @@ body {
 
 .top-collection .container > .btn-link {
   margin-inline: auto;
-  margin-block-start: 16px;
+  margin-block-start: 16px; /* Reduced margin */
 }
 
 .top-collection {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Remove the margin-bottom */
 }
+
 /*-----------------------------------*\
   #DISCOVER
 \*-----------------------------------*/
