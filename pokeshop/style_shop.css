@@ -287,7 +287,9 @@ header {
     color: transparent;
     background: linear-gradient(45deg, var(--blue-violet), var(--electric-indigo));
     background-image: var(--linear-gradient-2);
+    background-clip: text;
     -webkit-background-clip: text;
+    
     -webkit-text-fill-color: transparent;
     z-index: -1;
     left: 800px; /* Adjust the left position to position "Store" */
@@ -307,6 +309,7 @@ header {
 .gradient-text {
     background: linear-gradient(45deg, var(--blue-violet), var(--electric-indigo));
     background-image: var(--linear-gradient-2);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
