@@ -445,9 +445,15 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+}
 
-  
+.hero-title1 .span {
+  display: inline;
+  background-image: var(--linear-gradient-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 .hero .section-text {
@@ -483,15 +489,26 @@ body {
 }
 
 .top-collection .slider-item {
-  flex: 0 0 calc(100% / var(--slider-item)); /* Updated to use flexbox */
-  max-width: calc(100% / var(--slider-item)); /* Added max-width */
-  box-sizing: border-box; /* Added box-sizing */
-  padding: 0 8px; /* Adjusted padding */
+  flex: 0 0 auto; /* Change flex to allow images to resize based on their intrinsic size */
+  box-sizing: border-box;
+  padding: 0 4px; /* Adjusted padding */
+  margin: 0; /* Removed margin */
+}
+
+.top-collection .slider-item img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  height: 800px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure items don't overlap */
 }
 
 .collection-card {
   padding: 12px;
   box-shadow: var(--shadow-1);
+  margin: 0; /* Removed margin */
 }
 
 .collection-card .card-content {
@@ -506,44 +523,14 @@ body {
   margin-block-start: 4px;
 }
 
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--oxford-blue-2);
-  font-size: 1.7rem;
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%; /* Changed to make it circular */
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-  color: white; /* Added text color */
-}
-
-.slider-btn:hover,
-.slider-btn:focus-visible { /* Simplified hover and focus-visible styles */
-  background-color: var(--blue-violet);
-}
-
-.slider-btn:disabled {
-  display: none;
-}
-
-.slider-btn.prev {
-  left: 10px;
-}
-
-.slider-btn.next {
-  right: 10px;
-}
-
 .top-collection .container > .btn-link {
   margin-inline: auto;
-  margin-block-start: 32px;
+  margin-block-start: 16px; /* Reduced margin */
 }
 
+.top-collection {
+  margin-bottom: 0; /* Remove the margin-bottom */
+}
 
 /*-----------------------------------*\
   #DISCOVER
