@@ -13,12 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	
 </head>
-
-<!-- Cart -->
-	<a href="shop.html" class="back-homepage">
-		<i class='bx bx-chevron-left' ></i>
-		<span>Back To Home</span>
 <body>
     <div class="container">
         <div class="slides">
@@ -97,184 +93,17 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" value="Proceed to Checkout" class="submit-btn">
+                    <input type="button" value="Proceed to Checkout" class="submit-btn" onclick="showTransactionComplete()">
                 </form>
+                <!-- Checkout Confirmation -->
+                <div class="checkout-confirmation" style="display: none;">
+                    <h3 class="title">Transaction Complete!</h3>
+                    <button type="button" onclick="viewHistory()">View History</button>
+                </div>
             </div>
         </div>
     </div>
-	<div class="progress-bar">
-		<span style="width: 0%;"></span>
-	</div>
-    <footer class="footer">
+    <script src="payment.js"></script>
+</body>
+</html>
 
-        <div class="section footer-top">
-          <div class="container">
-    
-            <div class="footer-brand">
-    
-              <a href="#">
-                <img src="https://lh3.googleusercontent.com/3TSaKxXGo2wT0lu0AyNUBnkk6wkCC2AzOhJyy3JXIPm-AmZ1k9DSAroWeBUyePswCZSs5lVp3mPF7HzUpY9VPlyOV5eddITONINr3WSqLNLm=e365-w512" width="126" height="28" loading="lazy" alt="Pokemon Go!">
-              </a>
-    
-              <p class="body-md footer-text">
-                Get Up and GO!
-                Download Today
-              </p>
-    
-            </div>
-    
-            <ul class="footer-list">
-    
-              <li>
-                <p class="title-lg footer-list-title">Pokemon Go!</p>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Explore Item</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Live Auction</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Activities</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Wallets</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Creators</span>
-                </a>
-              </li>
-    
-            </ul>
-    
-            <ul class="footer-list">
-    
-              <li>
-                <p class="title-lg footer-list-title">Useful Links</p>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">About Us</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Blog & News</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Terms & Condition</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Privacy policy</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Login</span>
-                </a>
-              </li>
-    
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward"></ion-icon>
-    
-                  <span class="span">Contact Us</span>
-                </a>
-              </li>
-    
-            </ul>
-    
-            <div class="footer-list">
-    
-              <ul>
-              </ul>
-    
-              <ul>
-    
-                <li>
-                  <p class="title-lg footer-list-title">Contact Details</p>
-                </li>
-    
-                <li class="footer-list-item">
-                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-    
-                  <a href="mailto:metalink@nft.com" class="footer-link">PokemonGo@catch.com</a>
-                </li>
-    
-                <li class="footer-list-item">
-                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-    
-                  <a href="tel:+111 234-567-891" class="footer-link">+64 956-567-891</a>
-                </li>
-    
-              </ul>
-    
-            </div>
-    
-          </div>
-        </div>
-    
-        <div class="footer-bottom">
-          <div class="container">
-    
-            <p class="body-md text-center copyright">
-              &copy; 2023 PokemonGo!. Developed with <span class="span">❤</span> by Homebrodies
-            </p>
-    
-          </div>
-        </div>
-    
-      </footer>
-    
-      <a href="#top" class="back-to-top btn-icon" aria-label="back to top" data-back-top-btn>
-        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-      </a>
-    
-      <div class="body-bg-shape"></div>
-
-	</body>
-	</html>
-ChatGPT

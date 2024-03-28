@@ -2,12 +2,19 @@
 @import url('style_login.css');
 @import url('style_shop.css');
 
-
-* {
-  font-family: 'Poppins', sans-serif; /* Apply the Poppins font to all elements */
+/* Color Variables */
+:root {
+  --main-color: #27ae60;
+  --dark-green: #4CAF50;
 }
 
-.container{
+/* General Styles */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Layout */
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +22,7 @@
   min-height: 100vh;
 }
 
-.container form{
+.container form {
   padding: 20px;
   width: 700px;
   background: #fff;
@@ -23,18 +30,19 @@
   border-radius: 15px;
 }
 
-.container form .row{
+.container form .row {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  color:#2ecc71 red;
+  color: var(--main-color);
 }
 
-.container form .row .col{
+.container form .row .col {
   flex: 1 1 250px;
 }
 
-.container form .row .col .title{
+/* Titles */
+.container form .row .col .title {
   font-size: 40px;
   color: var(--main-color);
   -webkit-text-stroke: 1.2px rgb(45, 42, 42);
@@ -44,16 +52,13 @@
   text-align: center;
 }
 
-.container form .row .col .inputBox{
-  margin: 15px 0;
-}
-
-.container form .row .col .inputBox span{
+/* Input Styles */
+.container form .row .col .inputBox span {
   margin-bottom: 10px;
   display: block;
 }
 
-.container form .row .col .inputBox input{
+.container form .row .col .inputBox input {
   width: 100%;
   border: 1px solid #ccc;
   padding: 10px 15px;
@@ -61,44 +66,25 @@
   text-transform: none;
 }
 
-.container form .row .col .inputBox input:focus{
+.container form .row .col .inputBox input:focus {
   border: 1px solid #000000;
 }
 
-.container form .row .col .flex{
-  display: flex;
-  gap: 15px;
-}
-
-.container form .row .col .flex .inputBox{
-  margin-top: 5px;
-}
-
-.container form .row .col .inputBox img{
-  height: 34px;
-  margin-top: 5px;
-  filter: drop-shadow(0 0 1px #000000);
-}
-
-.container form .submit-btn{
+.container form .submit-btn {
   width: 100%;
   padding: 12px;
   font-size: 17px;
-  background: #27ae60;
+  background: var(--main-color);
   color: #fff;
   margin-top: 5px;
   cursor: pointer;
 }
 
-.container form .submit-btn:hover{
+.container form .submit-btn:hover {
   background: #2ecc71;
 }
 
-span {
-  color: black;
-  font-weight: 400;
-}
-
+/* Progress Bar */
 .progress-bar {
   width: 100%;
   margin-top: 20px;
@@ -120,10 +106,45 @@ span {
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #27ae60;
+  background-color: var(--main-color);
   transition: width 0.3s ease;
 }
 
+/* Checkout Confirmation */
 .slide:not(:first-child) {
   display: none;
+}
+
+#checkout-buttons p {
+  font-size: 18px;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.checkout-confirmation {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkout-confirmation p {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-green);
+  margin-bottom: 10px;
+}
+
+.checkout-confirmation button {
+  padding: 10px 20px;
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-confirmation button:hover {
+  background-color: #45a049;
 }
