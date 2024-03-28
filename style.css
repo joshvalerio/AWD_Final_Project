@@ -523,7 +523,7 @@ body {
   border-radius: 50%; /* Changed to make it circular */
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
-  color: white; /* Added text color */
+  color: white; 
 }
 
 .slider-btn:hover,
