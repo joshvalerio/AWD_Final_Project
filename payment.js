@@ -1,4 +1,5 @@
-    document.getElementById('next-btn').addEventListener('click', function() {
-        document.getElementById('billing-address').style.display = 'none';
-        document.getElementById('payment-method').style.display = 'block';
-    });
+function showPaymentMethod() {
+    document.getElementById("billing-address").style.display = "none";
+    document.getElementById("payment-method").style.display = "block";
+    document.querySelector(".progress-bar span").style.width = "100%";
+}
