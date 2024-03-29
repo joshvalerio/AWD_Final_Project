@@ -1,4 +1,7 @@
 /* CSS styles for transaction history page */
+@import url('style.css');
+@import url('style_shop.css');
+
 
 /* Example header styles */
 header {
