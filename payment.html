@@ -87,7 +87,6 @@
                                     <input type="radio" name="payment" id="mastercard">
                                     <input type="radio" name="payment" id="paypal">
                                     <input type="radio" name="payment" id="AMEX">
-
                                     <div class="category">
                                         <label for="visa" class="visaMethod">
                                             <div class="imgName">
@@ -98,7 +97,7 @@
                                             </div>
                                             <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
                                         </label>
-
+                            
                                         <label for="mastercard" class="mastercardMethod">
                                             <div class="imgName">
                                                 <div class="imgContainer mastercard">
@@ -108,7 +107,7 @@
                                             </div>
                                             <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
                                         </label>
-
+                            
                                         <label for="paypal" class="paypalMethod">
                                             <div class="imgName">
                                                 <div class="imgContainer paypal">
@@ -118,7 +117,7 @@
                                             </div>
                                             <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
                                         </label>
-
+                            
                                         <label for="AMEX" class="amexMethod">
                                             <div class="imgName">
                                                 <div class="imgContainer AMEX">
@@ -160,12 +159,17 @@
 			</div>
             <!-- Slide 3: Transaction Complete -->
             <div class="slide" id="checkout-confirmation" style="display: none;">
-                <h3 class="title">Transaction Complete!</h3>
-                <input type="button" value="View History" class="submit-btn" >
+                <div class="row">  
+                    <div class="col">
+                        <form action="#">
+                        <h1 class="title1">Transaction Complete!</h1>
+                        <input type="button" value="View Transaction History" class="submit-btn" onclick="showTransactionComplete()">     
+                        </form>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
-
 
     <footer class="custom-footer">
 
@@ -337,16 +341,6 @@
     
     <div class="custom-body-bg-shape"></div>
     
-
-
-
-
-
-
-
-
-
-
     <script src="payment.js"></script>
     <script type = "text/javascript" src="script_home.js"></script>
 </body>
