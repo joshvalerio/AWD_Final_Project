@@ -1,0 +1,68 @@
+/* CSS styles for transaction history page */
+
+/* Import other CSS files */
+@import url('style.css');
+@import url('style_shop.css');
+
+/* Example header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Example main content styles */
+main {
+    padding: 20px;
+}
+.cart-item-quantity{
+  border: 0px var(--light-gray);
+  outline-color: var(--light-gray);
+  width: 5rem;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #94a3b8;
+}
+
+.cart-item-title{
+  font-size: 2.4rem;
+  color: #ffffff;
+
+}
+.cart-item-price{
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+  color: #ffffff;
+  justify-self: end;
+  
+}
+.custom-logo-img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make it a block element for center alignment */
+    margin: 0 auto; /* Center align the image */
+    margin-bottom: 2rem;
+}
+
+.transaction-list {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px; /* Add margin-bottom for spacing */
+}
+
+.transaction-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Example footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
