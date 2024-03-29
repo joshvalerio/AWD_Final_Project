@@ -93,6 +93,13 @@
 
 /* Payment Method Styles */
 
+.container form #visa,
+.container form #mastercard,
+.container form #paypal,
+.container form #AMEX {
+  display: none;
+}
+
 .container .title {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -117,6 +124,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
+}
+
+.container form .payment-form input[type="radio"] {
+  display: none;
 }
 
 
@@ -200,15 +211,15 @@
 
 /*--Header--*/
 
-.custom-header {
+/* .custom-header {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 100;
-  justify-content: center; /* Center align the content */
+  justify-content: center; 
   margin: 0 auto;
   margin-bottom: 30px;
-}
+} */
 
 /* Styling for the custom logo text */
 .custom-logo {
@@ -304,108 +315,71 @@
   #FOOTER
 \*-----------------------------------*/
 
-.custom-footer {
+.footer {
   justify-content: space-between;
-  bottom: 0;
+  bottom: -2rem;
   width: 100%;
   height: 60%;
   background-color: var(--oxford-blue);
   padding: 20px 0; /* Adjust padding as needed */
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  margin-top: 200px;
 }
 
-.custom-footer-top {
-  padding-bottom: 30px; /* Add some padding to the bottom of the footer top */
+.footer-top {
+  padding-block-start: calc(var(--section-padding) -40rem); /* Adjust this value as needed to move the contents up */
+  border-block-end: 1px solid var(--white_a10);
 }
 
-.custom-footer-brand {
-  text-align: center;
+
+.footer-top .container {
+  display: grid;
+  gap: 32px;
 }
 
-.custom-footer-brand img {
-  width: 300px; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
+.footer-brand .footer-text {
+  color: var(--light-gray);
+  margin-block-start: 24px;
 }
 
-.custom-footer-text {
-  text-align: center; /* Center align the text */
-}
+.footer-list-title { margin-block-end: 24px; }
 
-.custom-footer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-}
-
-.custom-footer-list-title {
-  font-size: var(--title-lg);
-  color: var(--main-color);
-  margin-bottom: 10px; /* Add some space below the title */
-  text-align: center; /* Center align the title */
-  margin-block-end: 24px;
-}
-
-.custom-footer-link {
+.footer-link {
   display: flex;
   align-items: center;
-  color: var(--white); /* Set the link color */
-  text-decoration: none;
-  transition: color 0.3s ease; 
   gap: 2px;
   padding-block: 5px;
+  color: var(--light-gray);
 }
 
-.custom-footer-link:hover {
-  color: var(--blue-violet); /* Change the color on hover */
-}
+.footer-link ion-icon { color: inherit; }
 
-.custom-footer-list-item {
+.footer-list-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-.custom-footer-bottom {
-  background-color: var(--oxford-blue-1); /* Set the background color for the bottom section */
-  padding: 20px 0; /* Add padding to the top and bottom */
+.footer-list ul:first-child { margin-block-end: 24px; }
+
+.footer-list-item ion-icon {
+  color: var(--blue-violet);
+  font-size: 2rem;
+  --ionicon-stroke-width: 40px;
 }
 
-.custom-copyright {
-  text-align: center; /* Center align the copyright text */
+.footer-bottom {
+  position: relative; /* Add this to make it a positioned element */
+  bottom: 650px; /* Adjust this value as needed to move it up */
+  padding-block: 30px;
+  color: var(--light-gray);
 }
 
-/* Back to Top Button Styling */
-.custom-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--main-color);
-  color: var(--white);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+.copyright .span {
+  display: inline;
+  color: var(--maximum-red);
 
-.custom-back-to-top:hover {
-  background-color: var(--blue-violet); /* Change the background color on hover */
-}
-
-.custom-body-bg-shape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("your-background-image.jpg"); /* Add your background image */
-  background-size: cover;
-  z-index: -1; /* Send the shape to the back */
 }
 
 
