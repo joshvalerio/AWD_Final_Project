@@ -131,6 +131,13 @@
         z-index: -1; /* Set z-index to -1 to place it behind the content */
       }
 
+      .additional-notice {
+        display: block;
+        margin-top: 5px; /* Adjust as needed */
+        text-align: center;
+      }
+      
+
     
     /* .signin-signup {
     position: absolute;

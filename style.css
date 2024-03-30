@@ -736,6 +736,13 @@ body {
 
 }
 
+.additional-notice {
+  display: block;
+  margin-top: 5px; /* Adjust as needed */
+  text-align: center;
+}
+
+
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
