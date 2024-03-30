@@ -730,7 +730,7 @@ body {
   color: var(--light-gray);
 }
 
-.copyright .span {
+.copyright .span  {
   display: inline;
   color: var(--maximum-red);
 

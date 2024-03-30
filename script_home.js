@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       requestAnimationFrame(() => {
         enableTransition(); // Re-enable transition for smooth sliding
         sliderContainer.style.transform = `translateX(-${firstSlide.offsetWidth}px)`; // Move to the next slide
-      });
+      }) ;
     }
   
     function moveToPrevSlide() {

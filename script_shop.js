@@ -262,7 +262,7 @@ function updateCartIconOnCartChange(){
 
 window.addEventListener('storage', updateCartIconOnCartChange);
 
-function updateCartIcon(){
+function updateCartIcon() {
   const totalQuantity= cart.reduce((sum, item) => sum+item.quantity, 0)
   const cartIcon= document.getElementById('cart-icon');
   cartIcon.setAttribute('data-quantity', totalQuantity);

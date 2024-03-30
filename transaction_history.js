@@ -113,7 +113,7 @@ function renderTransactionHistory() {
             `;
             // Set the HTML content to the container element
             paymentMethodContainer.innerHTML = paymentMethodHTML;
-        }
+         } 
 
         // Check if billing address data exists
         if (savedBillingAddress) {

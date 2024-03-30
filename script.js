@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 document.getElementById("registerBtn").addEventListener("click", function(event) {
   // Prevent the default form submission behavior
